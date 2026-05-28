@@ -1,0 +1,32 @@
+# Build artifacts
+__pycache__
+*.py[cod]
+*.egg-info
+.venv
+venv
+
+# Caches
+.pytest_cache
+.mypy_cache
+.ruff_cache
+.coverage*
+htmlcov
+coverage.xml
+.hypothesis
+
+# VCS / editor
+.git
+.gitignore
+.idea
+.vscode
+.DS_Store
+
+# Docs / local
+docs
+*.md
+!README.md
+
+# Local env
+.env
+.env.local
+docker-compose.override.yml
