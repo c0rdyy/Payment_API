@@ -11,6 +11,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /build
 
 RUN apt-get update \
+    && apt-get upgrade -y \
     && apt-get install -y --no-install-recommends build-essential \
     && rm -rf /var/lib/apt/lists/*
 
@@ -30,6 +31,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     APP_HOME=/app
 
 RUN apt-get update \
+    && apt-get upgrade -y \
     && apt-get install -y --no-install-recommends tini curl \
     && rm -rf /var/lib/apt/lists/* \
     && groupadd --system --gid 1001 app \
